@@ -6,7 +6,7 @@ public class Factorial {
         if(num<0)
             return -1;
         else if(num==0)
-            return 1;
+            return 1; // Base condition i.e. where the recursion ends
         else
             return num* factorial(num-1);
     }

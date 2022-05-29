@@ -7,7 +7,7 @@ public class Fibonacci {
         if(num<0)
             return -1;
         if(num==0||num==1)
-            return num;
+            return num; // Base condition i.e. where the recursion ends
         return fibonacci(num-1)+fibonacci(num-2);
     }
 
