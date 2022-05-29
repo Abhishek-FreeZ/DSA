@@ -2,7 +2,7 @@ public class FibonacciWithRecursion {
 
     public static int fibonacci(int num){
         if(num<0)
-            return 0;
+            return -1;
         else if(num==0)
             return 1;
         else
