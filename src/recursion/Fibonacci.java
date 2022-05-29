@@ -1,8 +1,8 @@
-// Program to return fibonacci number using the index
+package recursion;// Program to return fibonacci number using the index
 
 import java.util.Scanner;
 
-public class FibonacciUsingRecursion {
+public class Fibonacci {
     static int fibonacci(int num){
         if(num<0)
             return -1;

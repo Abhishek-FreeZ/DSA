@@ -1,4 +1,6 @@
-public class FactorialWithRecursion {
+package recursion;
+
+public class Factorial {
 
     public static int factorial(int num){
         if(num<0)
