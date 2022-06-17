@@ -67,7 +67,7 @@ class SingleLinkedList<T>{
         while (tempNode!=null){
             System.out.print(tempNode.value);
             if(tempNode.next!=null)
-                System.out.print("->");
+                System.out.print(" -> ");
             tempNode=tempNode.next;
         }
         System.out.println();
@@ -151,6 +151,21 @@ class SingleLinkedList<T>{
             tempNode.next = tempNode.next.next;
             size--;
         }
+    }
+
+//    Reversing the linked list
+
+    public void reverse(){
+        Node previous = null;
+        Node current =head;
+        for(int i=0;i<size;i++){
+            Node nextNode = current.next;
+            current.next =previous;
+            previous=current;
+            current=nextNode;
+        }
+        tail = head;
+        head = previous;
     }
 
 }
