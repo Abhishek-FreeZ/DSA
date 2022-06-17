@@ -1,4 +1,4 @@
-package linkedlist.singlelinklist;
+package linkedList.singleLinkedList;
 
 public class Main {
     public static void main(String[] args) {
