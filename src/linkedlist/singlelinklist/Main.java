@@ -2,16 +2,18 @@ package linkedlist.singlelinklist;
 
 public class Main {
     public static void main(String[] args) {
-
-        SingleLinkedList sLL = new SingleLinkedList();
-        sLL.createSingleLinkedList(20);
-        sLL.insertNewNode(10,0);
-        sLL.insertNewNode(40,6);
-        sLL.insertNewNode(30,2);
-        sLL.insertNewNode(123123,100);
-        sLL.traverseSingleLinkedList();
-        sLL.searchNode(20);
-        sLL.searchNode(new Integer(5));
-
+        SingleLinkedList sLL =  new SingleLinkedList();
+        sLL.add(10);
+        sLL.add("Hello World");
+        sLL.add(10.32);
+        sLL.add(1,"abhishek");
+        sLL.add("Endl");
+        sLL.add(3,1000);
+        sLL.delete(new Integer(1));
+        sLL.search("Hello World");
+//        sLL.delete(new Integer(4));
+        sLL.display();
+        sLL.search(new Integer(3));
+//        System.out.println(sLL.head.value);
     }
 }
