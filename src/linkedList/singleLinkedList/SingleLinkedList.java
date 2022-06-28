@@ -82,6 +82,8 @@ class SingleLinkedList<T>{
 
     //    Search a value in the linkedlist
     public int indexOf(T value){
+        if(head==null)
+            return -1;
         int index = 0;
         Node tempNode = head;
         while(tempNode!=null){
