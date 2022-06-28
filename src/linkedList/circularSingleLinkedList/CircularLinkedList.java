@@ -85,22 +85,20 @@ public class CircularLinkedList<T>{
     }
 
 //    Searching a value in the linked list
-    public int search(T value){
+    public int indexOf(T value){
         Node tempNode = head;
         for(int i=0;i<size;i++){
             if(tempNode.value==value) {
-                System.out.println("The value " + value + " is at Node : " + i);
                 return i;
             }
             tempNode=tempNode.next;
         }
-        System.out.println("Node not found");
         return -1;
     }
 
 //    Searching value at any index in linked list
 
-    public void search(Integer location){
+    public void valueAt(Integer location){
         if(location<0||location>=size){
             System.out.println("Index out of bound");
             return;

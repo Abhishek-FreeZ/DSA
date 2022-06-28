@@ -10,8 +10,8 @@ public class Main {
         cLL.add(4,"End");
         cLL.display();
 //        System.out.println(cLL.tail.next.value);
-//        cLL.search(new Integer(4));
-        cLL.delete(cLL.search("End"));
+        cLL.valueAt(3);
+        cLL.delete(cLL.indexOf("End"));
         cLL.display();
 
         System.out.println(cLL.tail.value);
