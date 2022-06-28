@@ -106,6 +106,9 @@ public class DoubleLinkedList <T>{
 //    Searching an element in double linked list
 
     public int indexOf( T value){
+        if(head==null){
+            return -1;
+        }
         Node tempNode = head;
         for(int i =0 ;i< size;i++){
             if(tempNode.value==value){
