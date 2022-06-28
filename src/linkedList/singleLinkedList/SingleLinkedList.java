@@ -81,27 +81,25 @@ class SingleLinkedList<T>{
     }
 
     //    Search a value in the linkedlist
-    public boolean search(T value){
+    public int indexOf(T value){
         int index = 0;
         Node tempNode = head;
         while(tempNode!=null){
             if(tempNode.value==value){
-                System.out.println("The value ("+value+ ") is at index : "+ index );
-                return true;
+                return index;
             }
             tempNode=tempNode.next;
             index++;
         }
-        System.out.println("Node Not found ");
-        return false;
+        return -1;
     }
 
     //    Search value at a particular index
-    public boolean search(Integer index){
+    public void valueAt(Integer index){
         int indexLocal = 0;
         if(index<0||index>size){
             System.out.println("Index out of Bound");
-            return false;
+            return;
         }
         Node tempNode = head;
         while (indexLocal<index){
@@ -109,12 +107,15 @@ class SingleLinkedList<T>{
             indexLocal++;
         }
         System.out.println("Value at index "+index+" is :"+tempNode.value);
-        return true;
     }
 
 
     //    Deleting value from the Linked list with index as input
     public void delete(Integer index){
+        if(head==null){
+            System.out.println("No element to delete");
+            return;
+        }
         if(index<0){
             System.out.println("Index out of bound");
             return;
