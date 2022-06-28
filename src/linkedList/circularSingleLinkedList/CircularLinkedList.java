@@ -119,6 +119,8 @@ public class CircularLinkedList<T>{
             System.out.println("No element in linked list");
             return;
         }
+        if(location<0)
+            return;
         if(location==0){
             if(size==1){
                 head=null;
