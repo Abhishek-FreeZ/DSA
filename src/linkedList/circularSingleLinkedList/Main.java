@@ -9,7 +9,11 @@ public class Main {
         cLL.add(0,"Start");
         cLL.add(4,"End");
         cLL.display();
+//        System.out.println(cLL.tail.next.value);
+//        cLL.search(new Integer(4));
+        cLL.delete(cLL.search("End"));
+        cLL.display();
+
         System.out.println(cLL.tail.value);
-//        System.out.println(cLL.tail.value);
     }
 }

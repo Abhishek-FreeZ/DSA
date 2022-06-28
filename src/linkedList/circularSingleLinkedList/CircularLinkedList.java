@@ -76,4 +76,93 @@ public class CircularLinkedList<T>{
         }
         System.out.println();
     }
+
+    //Function to tell if the linked list is empty or not
+    public boolean isEmpty(){
+        if(head==null||tail==null)
+            return true;
+        return false;
+    }
+
+//    Searching a value in the linked list
+    public int search(T value){
+        Node tempNode = head;
+        for(int i=0;i<size;i++){
+            if(tempNode.value==value) {
+                System.out.println("The value " + value + " is at Node : " + i);
+                return i;
+            }
+            tempNode=tempNode.next;
+        }
+        System.out.println("Node not found");
+        return -1;
+    }
+
+//    Searching value at any index in linked list
+
+    public void search(Integer location){
+        if(location<0||location>=size){
+            System.out.println("Index out of bound");
+            return;
+        }
+        Node tempNode = head;
+        for(int i=0;i<location;i++){
+            tempNode=tempNode.next;
+        }
+        System.out.println(tempNode.value);
+    }
+
+//   Deleting element from circular Single Linked List
+
+    public void delete(Integer location){
+        if(head==null){
+            System.out.println("No element in linked list");
+            return;
+        }
+        if(location==0){
+            if(size==1){
+                head=null;
+                tail=null;
+            }
+            else {
+                head = head.next;
+                tail.next = head;
+            }
+        }
+        else if(location>=size-1){
+            if(size==1){
+                head=null;
+                tail=null;
+            }
+            else {
+                Node tempNode = head;
+                for (int i = 0; i < size - 2; i++) {
+                    tempNode = tempNode.next;
+                }
+                tempNode.next = head;
+                tail = tempNode;
+            }
+        }
+        else {
+            Node tempNode = head;
+            for(int i=0;i<location-1;i++){
+                tempNode=tempNode.next;
+            }
+            tempNode.next=tempNode.next.next;
+        }
+        size--;
+    }
+
+//    Delete all the elements of linked list
+    public void deleteAll(){
+        if(head==null){
+            System.out.println("Already empty");
+            return;
+        }
+        else{
+            head=null;
+            tail=null;
+            size=0;
+        }
+    }
 }
