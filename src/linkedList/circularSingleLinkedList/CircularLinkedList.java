@@ -6,7 +6,7 @@ public class CircularLinkedList<T>{
     public int size;
 
 // Creating New Node
-    public Node createNewNode(T value){
+    private Node createNewNode(T value){
         Node node = new Node();
         head = new Node();
         node.value=value;
