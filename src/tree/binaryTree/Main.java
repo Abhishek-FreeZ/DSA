@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         BinaryTreeLL binaryTree =  new BinaryTreeLL();
 
-        BinaryNode N1 = new BinaryNode();
+/*        BinaryNode N1 = new BinaryNode();
         N1.value = "N1";
         BinaryNode N2 = new BinaryNode();
         N2.value = "N2";
@@ -32,7 +32,18 @@ public class Main {
         N4.left = N8;
         N4.right = N9;
 
-        binaryTree.root = N1;
+        binaryTree.root = N1;*/
+
+        binaryTree.insert("N1");
+        binaryTree.insert("N2");
+        binaryTree.insert("N3");
+        binaryTree.insert("N4");
+        binaryTree.insert("N5");
+        binaryTree.insert("N6");
+        binaryTree.insert("N7");
+        binaryTree.insert("N8");
+        binaryTree.insert("N9");
+
 
         binaryTree.preOrder(binaryTree.root);
         System.out.println();

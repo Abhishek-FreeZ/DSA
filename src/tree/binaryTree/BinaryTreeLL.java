@@ -62,4 +62,33 @@ public class BinaryTreeLL {
     }
 
 
+//    Inserting in Binary Tree ( First empty Place level wise )
+
+    public void insert(String value){
+        BinaryNode newNode = new BinaryNode();
+        newNode.value = value;
+        if(root == null){
+            root = newNode;
+            System.out.println("Inserted at the root position");
+            return;
+        }
+        Queue<BinaryNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()){
+            BinaryNode presentNode = queue.remove();
+            if(presentNode.left == null){
+                presentNode.left = newNode;
+                System.out.println("Successfully Inserted");
+                return;
+            } else if(presentNode.right==null){
+                presentNode.right = newNode;
+                System.out.println("Successfully Inserted");
+                return;
+            }else {
+                queue.add(presentNode.left);
+                queue.add(presentNode.right);
+            }
+        }
+    }
+
 }
